@@ -1,6 +1,9 @@
+tws <- twsDisconnect(ibg)
 # IBGateway connection example
 require(IBrokers)
 ibg <- ibgConnect()
 
-# Disconnect from gateway
-twsDisconnect(ibg)
+# Disconnect from gateway test
+#twsDisconnect(ibg)
+
+AAPL <- reqMktData(ibg,twsSTK("AAPL"))
