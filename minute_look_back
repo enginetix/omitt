@@ -1,0 +1,9 @@
+time scale notes
+
+Based on the ProRealTime charting tools the following history is used for a given charting time scale.
+
+1 min (2 and 3) --> 2 hours --> 120 minutes
+5 min --> 12 hours --> 720  (144)
+15 min --> 3 days --> 4320 minutes (288)
+1 hour --> 8 days --> 11520 (192)
+1 day --> 150 days --> 216000 (150)
