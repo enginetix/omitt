@@ -1,14 +1,14 @@
 library(IBrokers)
 library(twsInstrument)
-library(mclust)
+#library(mclust)
 
 ## Not run: 
-#tws <- ibgConnect()
+tws <- ibgConnect()
 
 # price array
 price <- vector()
 
-#define_FX()
+define_FX()
 while(x<-1){
 #Sys.sleep(.1)
 fx <- get_quote(ls_twsInstruments())
@@ -28,15 +28,15 @@ try(mdl2 <- lm(coredata(price) ~ index(as.numeric(index(price)))))
 try(abline(mdl2, col='Red', lwd=1))
 
 #cluster model
-shrink <- .01
-try(mdl3 <- Mclust(data, prior = priorControl(functionName="defaultPrior", shrinkage=shrink)))
-try(summary(mdl3, parameters = TRUE, classification = F))
+#shrink <- .01
+#try(mdl3 <- Mclust(data, prior = priorControl(functionName="defaultPrior", shrinkage=shrink)))
+#try(summary(mdl3, parameters = TRUE, classification = F))
 
-try(
-for(i in 1:length(mdl3$parameters$mean)) {
-  abline(mdl3$parameters$mean[i],0, col=i+2)
-}
-)
+#try(
+#for(i in 1:length(mdl3$parameters$mean)) {
+#  abline(mdl3$parameters$mean[i],0, col=i+2)
+#}
+#)
 
 }
 ## End(Not run)
